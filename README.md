@@ -34,7 +34,7 @@ A sleek and intuitive **React** interface that powers a cloud-based note-taking 
 3. **Configure environment**
    Create a `.env.local` file:
    ```ini
-   REACT_APP_API_URL=https://notes-backend-deployment-latest.onrender.com/
+   REACT_APP_API_URL=http://your-backend-url
    ```
 
 4. **Start the dev server**
