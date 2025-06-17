@@ -753,29 +753,29 @@ const UserProfile = () => {
   };
 
   //update the credentials
-  const handleUpdateCredential = async (data) => {
-    const newUsername = data.username;
-    const newPassword = data.password;
+  // const handleUpdateCredential = async (data) => {
+  //   const newUsername = data.username;
+  //   const newPassword = data.password;
 
-    try {
-      setLoading(true);
-      const formData = new URLSearchParams();
-      formData.append("token", token);
-      formData.append("newUsername", newUsername);
-      formData.append("newPassword", newPassword);
-      await api.post("/auth/update-credentials", formData, {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+  //   try {
+  //     setLoading(true);
+  //     const formData = new URLSearchParams();
+  //     formData.append("token", token);
+  //     formData.append("newUsername", newUsername);
+  //     formData.append("newPassword", newPassword);
+  //     await api.post("/auth/update-credentials", formData, {
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //       },
+  //     });
 
-      toast.success("Update Credential successful");
-    } catch (error) {
-      toast.error("Update Credential failed");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.success("Update Credential successful");
+  //   } catch (error) {
+  //     toast.error("Update Credential failed");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   //set the status of (credentialsNonExpired, accountNonLocked, enabled and credentialsNonExpired) current user
   useEffect(() => {
@@ -808,108 +808,108 @@ const UserProfile = () => {
   }, [token]);
 
   //update the AccountExpiryStatus
-  const handleAccountExpiryStatus = async (event) => {
-    setAccountExpired(event.target.checked);
+  // const handleAccountExpiryStatus = async (event) => {
+  //   setAccountExpired(event.target.checked);
 
-    try {
-      const formData = new URLSearchParams();
-      formData.append("token", token);
-      formData.append("expire", event.target.checked);
+  //   try {
+  //     const formData = new URLSearchParams();
+  //     formData.append("token", token);
+  //     formData.append("expire", event.target.checked);
 
-      await api.put("/auth/update-expiry-status", formData, {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+  //     await api.put("/auth/update-expiry-status", formData, {
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //       },
+  //     });
 
-      toast.success("Update Account Expiry Status");
-    } catch (error) {
-      toast.error("Update expiry status failed");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.success("Update Account Expiry Status");
+  //   } catch (error) {
+  //     toast.error("Update expiry status failed");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   //update the AccountLockStatus
-  const handleAccountLockStatus = async (event) => {
-    setAccountLock(event.target.checked);
+  // const handleAccountLockStatus = async (event) => {
+  //   setAccountLock(event.target.checked);
 
-    try {
-      const formData = new URLSearchParams();
-      formData.append("token", token);
-      formData.append("lock", event.target.checked);
+  //   try {
+  //     const formData = new URLSearchParams();
+  //     formData.append("token", token);
+  //     formData.append("lock", event.target.checked);
 
-      await api.put("/auth/update-lock-status", formData, {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+  //     await api.put("/auth/update-lock-status", formData, {
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //       },
+  //     });
 
-      toast.success("Update Account Lock Status");
-    } catch (error) {
-      toast.error("Update Account Lock status failed");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.success("Update Account Lock Status");
+  //   } catch (error) {
+  //     toast.error("Update Account Lock status failed");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
-  //update the AccountEnabledStatus
-  const handleAccountEnabledStatus = async (event) => {
-    setAccountEnabled(event.target.checked);
-    try {
-      const formData = new URLSearchParams();
-      formData.append("token", token);
-      formData.append("enabled", event.target.checked);
+  // //update the AccountEnabledStatus
+  // const handleAccountEnabledStatus = async (event) => {
+  //   setAccountEnabled(event.target.checked);
+  //   try {
+  //     const formData = new URLSearchParams();
+  //     formData.append("token", token);
+  //     formData.append("enabled", event.target.checked);
 
-      await api.put("/auth/update-enabled-status", formData, {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+  //     await api.put("/auth/update-enabled-status", formData, {
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //       },
+  //     });
 
-      toast.success("Update Account Enabled Status");
-    } catch (error) {
-      toast.error("Update Account Enabled status failed");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.success("Update Account Enabled Status");
+  //   } catch (error) {
+  //     toast.error("Update Account Enabled status failed");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   //update the CredentialExpiredStatus
-  const handleCredentialExpiredStatus = async (event) => {
-    setCredentialExpired(event.target.checked);
-    try {
-      const formData = new URLSearchParams();
-      formData.append("token", token);
-      formData.append("expire", event.target.checked);
+  // const handleCredentialExpiredStatus = async (event) => {
+  //   setCredentialExpired(event.target.checked);
+  //   try {
+  //     const formData = new URLSearchParams();
+  //     formData.append("token", token);
+  //     formData.append("expire", event.target.checked);
 
-      await api.put("/auth/update-credentials-expiry-status", formData, {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+  //     await api.put("/auth/update-credentials-expiry-status", formData, {
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //       },
+  //     });
 
-      toast.success("Update Credentials Expiry Status");
-    } catch (error) {
-      toast.error("Credentials Expiry Status Failed");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.success("Update Credentials Expiry Status");
+  //   } catch (error) {
+  //     toast.error("Credentials Expiry Status Failed");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   if (pageError) {
     return <Errors message={pageError} />;
   }
 
   //two function for opening and closing the accordion
-  const onOpenAccountHandler = () => {
-    setOpenAccount(!openAccount);
-    setOpenSetting(false);
-  };
-  const onOpenSettingHandler = () => {
-    setOpenSetting(!openSetting);
-    setOpenAccount(false);
-  };
+  // const onOpenAccountHandler = () => {
+  //   setOpenAccount(!openAccount);
+  //   setOpenSetting(false);
+  // };
+  // const onOpenSettingHandler = () => {
+  //   setOpenSetting(!openSetting);
+  //   setOpenAccount(false);
+  // };
 
   return (
     <div className="min-h-[calc(100vh-74px)] py-10">
@@ -956,7 +956,7 @@ const UserProfile = () => {
                 </h1>
               </div>
               <div className="py-3">
-                <Accordion expanded={openAccount}>
+                {/* <Accordion expanded={openAccount}>
                   <AccordionSummary
                     className="shadow-md shadow-gray-300"
                     onClick={onOpenAccountHandler}
@@ -1016,8 +1016,8 @@ const UserProfile = () => {
                       </Buttons>
                     </form>
                   </AccordionDetails>
-                </Accordion>
-                <div className="mt-6">
+                </Accordion> */}
+                {/* <div className="mt-6">
                   <Accordion expanded={openSetting}>
                     <AccordionSummary
                       className="shadow-md shadow-gray-300"
@@ -1086,7 +1086,7 @@ const UserProfile = () => {
                       </div>
                     </AccordionDetails>
                   </Accordion>
-                </div>
+                </div> */}
 
                 <div className="pt-10">
                   <h3 className="text-slate-800 text-lg font-semibold mb-2 px-2">
