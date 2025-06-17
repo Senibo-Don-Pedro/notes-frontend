@@ -1,71 +1,91 @@
-# Getting Started with Create React App
+# 🧠 Notes App — Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sleek and intuitive **React** interface that powers a cloud-based note-taking experience. Designed for simplicity and performance, it offers real-time note listing, creation, editing, and deletion with a responsive layout suited for mobile and desktop. The frontend communicates with the Spring Boot backend via RESTful APIs and follows modern development standards for seamless integration.
 
-## Available Scripts
+### ✨ Highlights
+- Clean, responsive UI built with React hooks and functional components
+- Live CRUD operations powered by Axios
+- Extensible architecture with environment-driven API configuration
+- Perfect for deploying to Vercel, Netlify, or any static hosting platform
 
-In the project directory, you can run:
+🌐 **[View Live Demo](https://notes-application-frontend-9e75.onrender.com/)**
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🔧 Prerequisites
+- [Node.js](https://nodejs.org/) v14 or higher
+- Internet access to the backend API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Setup & Development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Senibo-Don-Pedro/notes-frontend.git
+   cd notes-frontend
+   ```
 
-### `npm run build`
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Configure environment**
+   Create a `.env.local` file:
+   ```ini
+   REACT_APP_API_URL=https://notes-backend-deployment-latest.onrender.com/
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Start the dev server**
+   ```bash
+   npm start
+   ```
+   
+   Visit http://localhost:3000 to view the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📦 Build & Deploy
+To generate a production build:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Deploy the `build/` directory to any static hosting provider (e.g., Vercel, Netlify).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🗂️ Project Structure
+```
+src/
+├── components/   # Reusable UI components (NoteList, NoteForm)
+├── pages/        # Application view components
+├── services/     # Axios API modules
+├── App.js        # Main app component
+└── index.js      # Entry point
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Tech Stack
+- React
+- Axios
+- Create React App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🤝 Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests. For major changes, please start a discussion via an issue first.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 👤 Author
+**Senibo Don‑Pedro**  
+[Connect on LinkedIn](https://linkedin.com/in/senibo-don-pedro)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# secure-notes-react-dev
+## 📄 License
+MIT © 2025 Senibo Don‑Pedro
